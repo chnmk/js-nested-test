@@ -1,8 +1,5 @@
-/*
-
 const { src, dest, watch, parallel, series } = require('gulp')
 
-const scss = require('gulp-sass')(require('sass'))
 const concat = require('gulp-concat')
 const uglify = require('gulp-uglify-es').default
 const browserSync = require('browser-sync').create()
@@ -10,9 +7,8 @@ const clean = require('gulp-clean')
 
 
 function styles() {
-    return src('app/scss/styles.scss')
+    return src('app/css/style.css')
         .pipe(concat('style.min.css'))
-        .pipe(scss({ outputStyle: 'compressed' }))
         .pipe(dest('app/css'))
         .pipe(browserSync.stream())
 }
@@ -34,7 +30,7 @@ function browsersync(){
 }
 
 function watching() {
-    watch(['app/scss/styles.scss'], styles)
+    watch(['app/css/style.css'], styles)
     watch(['app/js/main.js'], scripts)
     watch(['app/*.html']).on('change', browserSync.reload)
 }
@@ -60,5 +56,3 @@ exports.watching = watching
 exports.build = series(cleaning, building)
 
 exports.default = parallel(styles, scripts, browsersync, watching)
-
-*/
