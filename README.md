@@ -1,7 +1,7 @@
 # js-nested-test
 
-A JavaScript test task.
+A JavaScript test task solution. Creates a nested folder structure based on input data.
 
 ### Screenshot
 
-(TBD) ![](preview/screenshot.png)
+![](preview/screenshot.png)
