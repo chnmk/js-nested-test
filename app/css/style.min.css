@@ -23,3 +23,7 @@ html, body {
     padding: 2rem;
     overflow: auto;
 }
+
+.box__item {
+    margin-left: 0.5rem;
+}
